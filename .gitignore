@@ -3,6 +3,13 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+isb_lab_2/
+isb_lab_2.sln
+isb_lab_2.vcxproj
+isb_lab_2.vcxproj.filters
+isb_lab_2.vcxproj.user
+x64/
+.vs/
 # C extensions
 *.so
 
