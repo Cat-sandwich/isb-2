@@ -3,6 +3,7 @@
 #include <random>
 #include <bitset>
 #include <fstream>
+#include <algorithm> 
 using namespace std;
 
 
@@ -12,12 +13,13 @@ string generator()
 	srand(time(nullptr));
 	float res = 0;
 	string str;
-	while(size(str) < 128)
+	while (size(str) < 128)
 	{
-		string binary = bitset<8>(rand()).to_string();
-			
+		string binary = bitset<8>(rand()%256 + 0).to_string();
+
 		str += binary;
 	}
+	std::random_shuffle(&str[1], &str[str.length()]);
 	return str;
 }
 int main()
